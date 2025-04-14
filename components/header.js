@@ -10,7 +10,7 @@ class SiteHeader extends HTMLElement {
           <nav class="navbar no-transition">
             <div class="nav-logo">ECE 196 Team 6</div>
             <div class="nav-links">
-              <a href="/" class="nav-link">Home</a>
+              <a href="/ece196-website/" class="nav-link">Home</a>
               <a href="team.html" class="nav-link">Team</a>
               <a href="problem.html" class="nav-link">Problem</a>
             </div>
@@ -36,10 +36,11 @@ class SiteHeader extends HTMLElement {
     navLinks.forEach((link) => {
       const href = link.getAttribute("href");
 
-      if (href === "/") {
+      if (href === "/ece196-website/" || href === "/ece196-website") {
         if (
-          path === "/" ||
-          path.endsWith("/") ||
+          path === "/ece196-website/" ||
+          path === "/ece196-website" ||
+          path.endsWith("/ece196-website/") ||
           page === "" ||
           page === "index.html"
         ) {
