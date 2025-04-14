@@ -10,11 +10,16 @@ class SiteHeader extends HTMLElement {
           <nav class="navbar no-transition">
             <div class="nav-logo">ECE 196 Team 6</div>
             <div class="nav-links">
-              <a href="index.html" class="nav-link">Home</a>
+              <a href="/" class="nav-link">Home</a>
               <a href="team.html" class="nav-link">Team</a>
               <a href="problem.html" class="nav-link">Problem</a>
             </div>
           </nav>
+        </div>
+        <div class="viewport-warning">
+          <div class="warning-content">
+            <h2>Widen your browser to view.</h2>
+          </div>
         </div>
       </header>
     `;
@@ -29,7 +34,18 @@ class SiteHeader extends HTMLElement {
 
     const navLinks = this.querySelectorAll(".nav-link");
     navLinks.forEach((link) => {
-      if (link.getAttribute("href") === page) {
+      const href = link.getAttribute("href");
+
+      if (href === "/") {
+        if (
+          path === "/" ||
+          path.endsWith("/") ||
+          page === "" ||
+          page === "index.html"
+        ) {
+          link.classList.add("active");
+        }
+      } else if (href === page) {
         link.classList.add("active");
       }
     });
