@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem - ECE 196 Project</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="components/header.js" as="script" />
+    <link rel="preload" href="components/footer.js" as="script" />
+    <link rel="preload" href="css/critical.css" as="style" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Critical CSS for navbar -->
+    <link rel="stylesheet" href="css/critical.css" />
+
+    <!-- Other stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Prefetch other pages for faster navigation -->
+    <link rel="prefetch" href="index.html" />
+    <link rel="prefetch" href="team.html" />
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="js/alpine.min.js" defer></script>
+  </head>
+  <body>
+    <site-header></site-header>
+
+    <main class="container">
+      <section class="animate__animated animate__fadeIn">
+        <div class="problem-section">
+          <h1>Problem Definition & Motivation</h1>
+          <div class="image-text-container">
+            <img src="./images/blownose.jpeg" alt="Problem Illustration" />
+            <div>
+              <p>
+                Indoor environmental conditions such as poor air quality, noise,
+                and lighting frequently impair the cognitive performance of
+                students and knowledge workers, while unoccupied rooms with
+                active lighting and HVAC systems result in unnecessary energy
+                waste.
+              </p>
+              <p>
+                Being students ourselves, we are often in classrooms that may be
+                uncomfortable or distracting. This can be particulary disruptive
+                during exams or presentations that require your full focus. We
+                wanted to address this problem by, at the bare minimum,
+                providing an easy and comprehensive solution to monitor indoor
+                conditions. Additionally, we all are interested in IoT,
+                embedded, and programming, and had similar ideas for our project
+                proposals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="problem-section">
+          <h1 class="section-divider">Current Solutions</h1>
+          <div class="image-text-container">
+            <img src="./images/placeholder.jpg" alt="Our Solution" />
+            <div>
+              <p>
+                Our team is developing a low-cost, modular IoT solution that
+                combines acoustic sensors, machine learning, and a cloud-based
+                analytics platform to detect and localize water leaks in
+                real-time before they become major issues.
+              </p>
+              <p>
+                By focusing on non-invasive installation and leveraging existing
+                infrastructure, our solution minimizes deployment costs while
+                maximizing impact. Early testing shows our system can detect
+                leaks with 95% accuracy and reduce detection time from weeks to
+                hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <site-footer></site-footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

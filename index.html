@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team 6</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="components/header.js" as="script" />
+    <link rel="preload" href="components/footer.js" as="script" />
+    <link rel="preload" href="css/critical.css" as="style" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Critical CSS for navbar -->
+    <link rel="stylesheet" href="css/critical.css" />
+
+    <!-- Other stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Prefetch other pages for faster navigation -->
+    <link rel="prefetch" href="team.html" />
+    <link rel="prefetch" href="problem.html" />
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="js/alpine.min.js" defer></script>
+  </head>
+  <body>
+    <site-header></site-header>
+
+    <main class="container">
+      <section class="animate__animated animate__fadeIn">
+        <h1 class="super-heading">ECE 196 Team 6</h1>
+        <div>
+          <p>
+            Welcome to the ECE 196 Spring 2025 Team 6 project page! We want to
+            create an IoT monitoring system to track indoor conditions. Our team
+            is Evan, Mark, & Kevin.
+          </p>
+
+          <div class="button-container">
+            <a href="team.html" class="gradient-button animate__animated"
+              >Our Team</a
+            >
+            <a
+              href="problem.html"
+              class="arrow-button animate__animated"
+              data-text="The Problem"
+              >The Problem</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <site-footer></site-footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
