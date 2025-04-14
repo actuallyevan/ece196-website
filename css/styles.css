@@ -3,25 +3,25 @@
 :root {
   --bg-color: #121212;
   --card-bg: #1e1e1e;
-  --text-primary: #e0e0e0; /* Changed from #ffffff to slightly grey */
+  --text-primary: #e0e0e0;
   --text-secondary: #b0b0b0;
   --accent: #6366f1;
-  --content-width: 960px; /* Increased from 800px to 960px */
-  --team-content-width: 1800px; /* New variable for wider team container */
+  --content-width: 960px;
+  --team-content-width: 1800px;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
   --border-radius: 16px;
-  --image-border-radius: 4px; /* New variable for subtle image rounding */
+  --image-border-radius: 4px;
+  --divider-color: rgba(176, 176, 176, 0.25);
 }
 
-/* Hide scrollbar for all browsers while maintaining functionality */
+/* Hide scrollbar while maintaining functionality */
 html {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -38,7 +38,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   padding-top: 100px;
-  font-size: 1.05rem; /* Added base font size for all text elements */
+  font-size: 1.05rem;
 }
 
 .container {
@@ -47,7 +47,6 @@ body {
   padding: 0 var(--spacing-sm);
 }
 
-/* New wider container for team page */
 .team-container {
   max-width: var(--team-content-width);
   margin: 0 auto;
@@ -60,12 +59,11 @@ h2 {
   line-height: 1.2;
 }
 
-/* New super heading style */
 .super-heading {
-  font-size: 6rem; /* doubled from 3rem */
+  font-size: 6rem;
   font-weight: 800;
   margin-bottom: 2rem;
-  color: #ffffff; /* changed from #a0a0a0 to white */
+  color: #ffffff;
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
@@ -73,196 +71,139 @@ h2 {
 h1 {
   font-size: 2rem;
   margin-top: var(--spacing-md);
-  margin-bottom: 0.3rem; /* Reduced from 0.5rem to decrease spacing */
-  padding-top: 1.25rem; /* Reduced from 1.5rem to decrease spacing */
+  margin-bottom: 0.3rem;
+  padding-top: 1.25rem;
 }
 
-/* New specific rule for section divider headings to decrease spacing */
 h1.section-divider {
-  padding-top: 0.75rem; /* Reduced from 1.5rem to decrease space after divider */
+  padding-top: 0.75rem;
 }
 
 h2 {
   font-size: 1.5rem;
   margin-top: var(--spacing-md);
-  margin-bottom: 0.5rem; /* Reduced from 0.8rem */
+  margin-bottom: 0.5rem;
   padding-top: 1.2rem;
   color: var(--text-secondary);
 }
 
-/* New class for section dividers - standardized color */
-.section-divider {
-  border-top: 2px solid rgba(176, 176, 176, 0.25); /* Standardized color */
-}
-
+.section-divider,
 .section-divider-alt {
-  border-top: 2px solid rgba(176, 176, 176, 0.25); /* Updated to match other dividers */
+  border-top: 2px solid var(--divider-color);
 }
 
 p {
   margin-bottom: var(--spacing-md);
   font-weight: 300;
-  font-size: 1.15rem; /* Increased from 1.05rem to make text larger globally */
+  font-size: 1.15rem;
 }
 
-.team-member {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: var(--spacing-lg);
-  text-align: center;
+/* Problem section styling */
+.problem-section p + ul {
+  margin-top: -1.5rem;
 }
 
-.team-member img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: var(
-    --image-border-radius
-  ); /* Using new variable for subtle rounding */
+.problem-section ul {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  padding-left: 1.5rem;
+  list-style-position: outside;
+}
+
+.problem-section li {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.problem-section img {
+  max-width: 100%;
+  border-radius: var(--image-border-radius);
+  margin: calc(var(--spacing-md) * 0.5) 0;
+}
+
+.problem-section {
   margin-bottom: var(--spacing-md);
 }
 
-/* Team grid layout */
-.team-grid {
+/* Image and text layout */
+.image-text-container {
   display: flex;
-  flex-direction: row; /* Explicitly set to row to ensure horizontal layout */
-  flex-wrap: nowrap; /* Changed back to nowrap to prevent wrapping */
-  justify-content: center;
+  flex-direction: column;
   gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  margin-top: 0.3rem;
 }
 
-.team-card {
-  flex: 0 0 auto;
-  width: 400px; /* Reduced from 500px */
-  padding: 1.5rem 1.5rem 2rem;
-  text-align: center;
-  /* Adding initial opacity to reduce flickering */
-  opacity: 0;
-  will-change: opacity;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+.images-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
-.team-card img {
-  width: 100%;
-  height: auto; /* Changed from fixed height to maintain aspect ratio */
-  object-fit: unset; /* Removed 'cover' to prevent cropping */
-  border-radius: var(
-    --image-border-radius
-  ); /* Using new variable for subtle rounding */
-  margin-bottom: var(--spacing-sm);
-}
-
-/* Add specific styling for h1 elements inside team cards */
-.team-card h1 {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-@media (max-width: 768px) {
-  .team-grid {
-    flex-direction: column; /* Stack vertically on mobile */
-    align-items: center;
-    overflow-x: hidden; /* Hide horizontal scrollbar on mobile */
+@media (min-width: 768px) {
+  .image-text-container {
+    flex-direction: row;
+    align-items: flex-start;
   }
 
-  .team-card {
-    margin-bottom: var(--spacing-md);
-    width: 100%; /* Take full width on mobile */
-    max-width: 520px; /* But not more than the desktop size */
+  .images-wrapper {
+    max-width: 40%;
+    order: 2;
+  }
+
+  .image-text-container > div:not(.images-wrapper) {
+    max-width: 55%;
+    order: 1;
+    margin-top: 0.5rem;
+  }
+
+  .image-text-container img {
+    max-width: 100%;
+    margin-top: 0;
   }
 }
 
-/* Team page new layout */
+/* Team styling */
 .team-layout {
   display: flex;
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
+  justify-content: center;
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team-column {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-  flex: 1;
-  position: relative; /* For positioning the divider */
-}
-
-/* Add divider between the two vertically stacked cards - thicker line */
-.divider-card {
   position: relative;
-  padding-bottom: var(--spacing-md); /* Add space for the divider */
-}
-
-.divider-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px; /* Increased from 1px to 2px */
-  background-color: rgba(176, 176, 176, 0.25); /* Improved visibility */
-}
-
-/* Specific styling for the centered column with dividers */
-.centered-column {
-  justify-content: center;
-  position: relative; /* For positioning the dividers */
-  padding: var(--spacing-md) 0; /* Add padding for the dividers */
-}
-
-/* Remove the horizontal dividers from the centered-column */
-.centered-column::before,
-.centered-column::after {
-  content: none; /* This removes the divider lines */
-}
-
-/* Card wrapper with dividers */
-.card-wrapper {
-  position: relative;
-  padding: var(--spacing-md) 0;
-}
-
-/* Horizontal divider above the card - thicker line */
-.card-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px; /* Increased from 1px to 2px */
-  background-color: rgba(176, 176, 176, 0.25); /* Improved visibility */
-}
-
-/* Horizontal divider below the card - thicker line */
-.card-wrapper::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px; /* Increased from 1px to 2px */
-  background-color: rgba(176, 176, 176, 0.25); /* Improved visibility */
+  width: calc(50% - (var(--spacing-md) / 2));
+  max-width: 400px;
 }
 
 .team-card {
-  padding: 1.5rem;
-  /* Adding initial opacity to reduce flickering */
+  flex: 0 0 auto;
+  padding: 1.5rem 1.5rem 2rem;
+  text-align: center;
   opacity: 0;
   will-change: opacity;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  width: 100%;
 }
 
 .team-card img {
   width: 100%;
-  height: auto; /* Changed from fixed height to maintain aspect ratio */
-  object-fit: unset; /* Removed 'cover' to prevent cropping */
-  border-radius: var(--image-border-radius); /* Subtle rounding */
+  height: auto;
+  border-radius: var(--image-border-radius);
   margin-bottom: var(--spacing-sm);
+}
+
+.team-card h1 {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .team-info {
@@ -279,69 +220,60 @@ p {
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
-  .team-layout {
-    flex-direction: column;
-  }
-
-  .team-card {
-    width: 100%;
-  }
+.divider-card {
+  position: relative;
+  padding-bottom: var(--spacing-md);
 }
 
-.problem-section {
-  margin-bottom: var(
-    --spacing-md
-  ); /* Reduced from var(--spacing-lg) to var(--spacing-md) */
+.divider-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--divider-color);
 }
 
-.problem-section img {
-  max-width: 100%;
-  border-radius: var(--image-border-radius); /* Subtle rounding */
-  margin: calc(var(--spacing-md) * 0.5) 0; /* Adjusted from var(--spacing-md) */
-}
-
-.image-text-container {
+.centered-column {
+  justify-content: center;
+  position: relative;
+  padding: var(--spacing-md) 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
-  margin-top: 0.3rem; /* Reduced from 0.5rem to decrease spacing from heading */
+  align-items: center;
 }
 
-@media (min-width: 768px) {
-  .image-text-container {
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap; /* Allow wrapping */
-  }
-
-  .image-text-container img {
-    max-width: 40%;
-    order: 2; /* Force image to be second/right regardless of HTML order */
-    margin-top: -0.5rem; /* Added negative margin to move images up */
-  }
-
-  .image-text-container > div {
-    max-width: 55%; /* Give text slightly more space */
-    order: 1; /* Force text to be first/left regardless of HTML order */
-    margin-top: 0.5rem; /* Reduced from 1rem to decrease spacing */
-  }
+.card-wrapper {
+  position: relative;
+  padding: var(--spacing-md) 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.text-center {
-  text-align: center;
+.card-wrapper::before,
+.card-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--divider-color);
+  width: 100%;
 }
 
-/* Update all images to have subtle rounding */
-img {
-  border-radius: var(--image-border-radius);
-  border: 2px solid var(--text-primary); /* Add a thin border matching the text color */
+.card-wrapper::before {
+  top: 0;
 }
 
-/* Position for the team page heading - left aligned text within top-right container */
+.card-wrapper::after {
+  bottom: 0;
+}
+
 .team-heading-container {
   position: absolute;
-  top: -2rem; /* Changed from 0 to move text upward */
+  top: -2rem;
   right: 0;
   text-align: left;
   padding: 1rem;
@@ -351,16 +283,15 @@ img {
 /* Button styling */
 .button-container {
   display: flex;
-  gap: 2rem; /* Reduced gap between buttons */
+  gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
   align-items: center;
-  justify-content: flex-end; /* Right-align the buttons */
-  width: 100%; /* Take up full width of container */
-  position: relative; /* Added for absolute positioning of the line */
+  justify-content: flex-end;
+  width: 100%;
+  position: relative;
 }
 
-/* Add a decorative line that extends from left edge to the gradient button */
 .button-container::before {
   content: "";
   position: absolute;
@@ -368,14 +299,13 @@ img {
   top: 50%;
   height: 2px;
   width: calc(100% - 400px);
-  background-color: rgba(176, 176, 176, 0.25); /* Standardized color */
+  background-color: var(--divider-color);
 }
 
-/* Flooding effect from left to right with blended edge */
 .gradient-button {
   display: inline-block;
-  padding: 0.8rem 1.75rem; /* Reduced padding for slightly smaller button */
-  min-width: 170px; /* Slightly reduced min-width */
+  padding: 0.8rem 1.75rem;
+  min-width: 170px;
   text-align: center;
   background: linear-gradient(135deg, #3730a3 0%, #4f46e5 100%);
   color: white;
@@ -391,15 +321,13 @@ img {
   z-index: 1;
 }
 
-/* Replace the previous ::before implementation with this blended version */
 .gradient-button::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -200%; /* Start further outside the button */
-  width: 200%; /* Make it wider than the button */
+  left: -200%;
+  width: 200%;
   height: 100%;
-  /* Create a gradient with transparency for blending */
   background: linear-gradient(
     90deg,
     #6366f1e6 0%,
@@ -407,12 +335,12 @@ img {
     #a5b4fce6 75%,
     #a5b4fc00 100%
   );
-  transition: left 0.5s cubic-bezier(0.19, 1, 0.22, 1); /* Use a custom easing function */
+  transition: left 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   z-index: -1;
 }
 
 .gradient-button:hover::before {
-  left: 0; /* Move to cover the button and extend beyond */
+  left: 0;
 }
 
 .gradient-button:hover {
@@ -423,46 +351,63 @@ img {
   box-shadow: 0 5px 10px rgba(99, 102, 241, 0.4);
 }
 
-/* Remove old animation */
-.gradient-button::after {
-  content: none; /* Remove ripple effect */
-}
-
-@keyframes ripple {
-  /* Existing animation keyframes can remain */
-}
-
-/* Arrow button style with a thicker, more prominent arrow */
 .arrow-button {
   display: inline-flex;
   align-items: center;
-  padding: 0.8rem 0; /* Reduced padding to match gradient button height */
+  padding: 0.8rem 0;
   min-width: auto;
   text-align: center;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.125rem; /* Increased text size by 12.5% */
+  font-size: 1.125rem;
   color: var(--text-primary);
   position: relative;
 }
 
 .arrow-button::after {
-  content: "🡲"; /* Using a heavier arrow character: U+2794 */
+  content: "🡲";
   margin-left: 0.5rem;
   display: inline-block;
   transition: transform 0.3s ease;
-  font-size: 0.9em; /* Make arrow even larger */
-  line-height: 0; /* Better vertical alignment */
+  font-size: 0.9em;
+  line-height: 0;
   position: relative;
-  top: 0.05em; /* Adjust vertical alignment upward */
+  top: 0.05em;
 }
 
-/* Move the arrow right on hover */
 .arrow-button:hover::after {
   transform: translateX(5px);
 }
 
-/* Responsive adjustments for buttons */
+/* General utility classes */
+.text-center {
+  text-align: center;
+}
+
+img {
+  border-radius: var(--image-border-radius);
+  border: 2px solid var(--text-primary);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .team-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-column {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .team-card {
+    margin-bottom: var(--spacing-md);
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 576px) {
   .button-container {
     flex-direction: column;

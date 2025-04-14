@@ -1,4 +1,10 @@
-/* Critical navbar styles to prevent flashing/pop-in */
+:root {
+  --content-width: 960px;
+  --divider-color: rgba(176, 176, 176, 0.25);
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+}
+
 .nav-container {
   position: fixed;
   top: 20px;
@@ -15,20 +21,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(
-    38,
-    38,
-    38,
-    0.95
-  ); /* Increased opacity from 0.9 to 0.95 */
+  background-color: rgba(38, 38, 38, 0.95);
   backdrop-filter: blur(10px);
   padding: 1rem 2rem;
   border-radius: 16px;
-  max-width: calc(var(--content-width) * 1.2); /* Increased from 1.15 to 1.2 */
+  max-width: calc(var(--content-width) * 1.2);
   width: 100%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  /* Add a transparent bottom border by default to prevent the flash */
   border-bottom: 2px solid transparent;
 }
 
@@ -40,7 +40,7 @@
   border-radius: 0;
   background-color: transparent;
   box-shadow: none;
-  border-bottom: 2px solid rgba(176, 176, 176, 0.25); /* Change to match other divider lines */
+  border-bottom: 2px solid var(--divider-color);
   padding-top: 1.5rem;
 }
 
