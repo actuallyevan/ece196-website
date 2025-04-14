@@ -362,21 +362,30 @@ p {
   font-size: 1.125rem;
   color: var(--text-primary);
   position: relative;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .arrow-button::after {
-  content: "🡲";
+  content: "❯";
   margin-left: 0.5rem;
   display: inline-block;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
   font-size: 0.9em;
   line-height: 0;
   position: relative;
-  top: 0.05em;
+  top: 0.01em;
+}
+
+.arrow-button:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.8);
 }
 
 .arrow-button:hover::after {
   transform: translateX(5px);
+  color: #e2e5ff;
+  text-shadow: 0 0 10px rgba(99, 102, 241, 1), 0 0 15px rgba(99, 102, 241, 0.9),
+    0 0 20px rgba(99, 102, 241, 0.8);
 }
 
 /* Viewport Warning Styles */

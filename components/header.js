@@ -55,7 +55,7 @@ class SiteHeader extends HTMLElement {
   setupScrollHandler() {
     const navbar = document.querySelector(".navbar");
 
-    if (window.scrollY === 0) {
+    if (window.scrollY <= 0) {
       navbar.classList.add("at-top");
     }
 
@@ -64,7 +64,7 @@ class SiteHeader extends HTMLElement {
     }, 100);
 
     window.addEventListener("scroll", () => {
-      if (window.scrollY === 0) {
+      if (window.scrollY <= 0) {
         navbar.classList.add("at-top");
       } else {
         navbar.classList.remove("at-top");
