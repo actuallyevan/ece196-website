@@ -13,6 +13,8 @@ class SiteHeader extends HTMLElement {
               <a href="/ece196-website/" class="nav-link">Home</a>
               <a href="team.html" class="nav-link">Team</a>
               <a href="problem.html" class="nav-link">Problem</a>
+              <a href="solution.html" class="nav-link">Solution</a>
+              <a href="timeline.html" class="nav-link">Timeline</a>
             </div>
           </nav>
         </div>

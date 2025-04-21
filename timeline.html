@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!-- Preload images -->
+    <link rel="preload" href="./images/timeline.png" as="image" />
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/critical.css" />
     <link
@@ -20,6 +23,7 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Prefetch other pages -->
+    <link rel="prefetch" href="index.html" />
     <link rel="prefetch" href="team.html" />
     <link rel="prefetch" href="problem.html" />
     <link rel="prefetch" href="solution.html" />
@@ -31,37 +35,15 @@
 
     <main class="container">
       <section class="animate__animated animate__fadeIn">
-        <h1 class="super-heading">ECE 196 Team 6</h1>
-        <div>
-          <p>
-            Welcome to the ECE 196 Spring 2025 Team 6 project page! We want to
-            create a monitoring system to track indoor conditions. Our team is
-            Evan, Mark, & Kevin.
-          </p>
+        <h1>Project Timeline</h1>
 
-          <div class="button-container">
-            <a href="team.html" class="gradient-button animate__animated"
-              >Our Team</a
-            >
-            <a
-              href="problem.html"
-              class="arrow-button animate__animated"
-              data-text="The Problem"
-              >The Problem</a
-            >
-            <a
-              href="solution.html"
-              class="arrow-button animate__animated"
-              data-text="Our Solution"
-              >Our Solution</a
-            >
-            <a
-              href="timeline.html"
-              class="arrow-button animate__animated"
-              data-text="Timeline"
-              >Timeline</a
-            >
-          </div>
+        <div class="top-image-container">
+          <img
+            src="./images/timeline.png"
+            alt="Project Timeline"
+            class="full-width-image"
+          />
+          <p class="image-caption">Our project development timeline</p>
         </div>
       </section>
     </main>
