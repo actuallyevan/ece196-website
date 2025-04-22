@@ -58,8 +58,7 @@
               <li>Humidity</li>
               <li>Gas (VOCs)</li>
               <li>Carbon Dioxide</li>
-              <li>PM 1, 2.5, 4, 10</li>
-              <li>Light</li>
+              <li>PM 1, 2.5, 10</li>
               <li>Sound</li>
             </ul>
             <p>
@@ -74,20 +73,19 @@
             <h2>Technological Aspects</h2>
             <p>
               To realize our solution, we will be using an ESP32 based board
-              (Sparkfun Thing Plus) in combination with multiple sensors, such
+              (Adafruit Feather V2) in combination with multiple sensors, such
               as:
             </p>
             <ul>
               <li>BME 680</li>
-              <li>SCD 30</li>
-              <li>SPS30</li>
-              <li>VEML7700</li>
+              <li>SCD-40</li>
+              <li>PMSA003I</li>
               <li>ICS‑43434</li>
             </ul>
             <p>
               An LCD display will be used to show the collected data. We will
               leverage I2C, I2S, and SPI to facilitate communication between the
-              sensors and the Sparkfun ESP32 board. For power, we will use both
+              sensors and the Adafruit ESP32 board. For power, we will use both
               the 3.3 volt pin and VUSB (5 volts) from ESP32 board. All power
               and communication needs can be met with minimal extra hardware.
             </p>
