@@ -39,6 +39,9 @@ body {
   line-height: 1.6;
   padding-top: 100px;
   font-size: 1.05rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -66,6 +69,17 @@ h2 {
   color: #ffffff;
   letter-spacing: -0.02em;
   line-height: 1.1;
+}
+
+/* Home page specific spacing */
+.home-super-heading {
+  margin-bottom: 0rem;
+}
+
+.home-h1 {
+  margin-top: -0.5rem;
+  padding-top: 0.5rem; 
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -388,8 +402,8 @@ p {
   top: 50%;
   height: 2px;
   width: calc(
-    100% - 630px
-  ); /* Increased from 500px to accommodate the additional button */
+    100% - 830px
+  ); /* Increased from 770px to prevent clipping into "Our Team" button */
   background-color: var(--divider-color);
 }
 
@@ -523,6 +537,93 @@ img {
   border: 2px solid var(--text-primary);
 }
 
+/* Image Carousel Styles */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 2.5rem 0;
+  gap: 1.5rem;
+}
+
+.carousel-content {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: var(--image-border-radius);
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: var(--image-border-radius);
+  border: 2px solid var(--text-primary);
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+.carousel-arrow {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-weight: 500;
+}
+
+.carousel-arrow:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.8);
+}
+
+.carousel-arrow:focus {
+  outline: none;
+}
+
+.carousel-prev {
+  margin-right: 0.5rem;
+}
+
+.carousel-next {
+  margin-left: 0.5rem;
+}
+
+.carousel-caption {
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-images {
+    height: 300px;
+  }
+  
+  .carousel-arrow {
+    font-size: 1.2rem;
+  }
+}
+
 /* Media queries */
 @media (max-width: 768px) {
   .team-layout {
@@ -551,4 +652,31 @@ img {
   .gradient-button {
     width: 100%;
   }
+}
+
+/* Add styles for the updates page */
+.updates-list {
+  margin-top: 2rem;
+}
+
+.updates-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.updates-list li {
+  margin-bottom: 1.25rem;
+}
+
+.update-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.update-link:hover {
+  color: var(--accent);
 }

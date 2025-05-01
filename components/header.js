@@ -15,6 +15,8 @@ class SiteHeader extends HTMLElement {
               <a href="problem.html" class="nav-link">Problem</a>
               <a href="solution.html" class="nav-link">Solution</a>
               <a href="timeline.html" class="nav-link">Timeline</a>
+              <a href="media.html" class="nav-link">Media</a>
+              <a href="updates.html" class="nav-link">Updates</a>
             </div>
           </nav>
         </div>

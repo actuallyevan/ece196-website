@@ -79,3 +79,26 @@
     padding-top: 1rem;
   }
 }
+
+/* Footer styles */
+footer {
+  position: relative;
+  width: 100%;
+  padding: 20px 0 30px; /* Increased bottom padding */
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: calc(var(--content-width) * 1.2);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-logo {
+  max-height: 65px; /* Increased from 50px to make logo bigger */
+  width: auto;
+  margin-left: 0;
+  border: none;
+}

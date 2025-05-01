@@ -7,6 +7,7 @@
 
     <!-- Preload critical resources -->
     <link rel="preload" href="components/header.js" as="script" />
+    <link rel="preload" href="components/footer.js" as="script" />
     <link rel="preload" href="css/critical.css" as="style" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,8 +29,10 @@
     <!-- Prefetch other pages -->
     <link rel="prefetch" href="index.html" />
     <link rel="prefetch" href="team.html" />
+    <link rel="prefetch" href="updates.html" />
 
     <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
   </head>
   <body>
     <site-header></site-header>
@@ -44,10 +47,11 @@
             </div>
             <div>
               <p>
-                Indoor environmental conditions such as poor air quality, noise,
-                and lighting frequently impair the cognitive performance of
-                students and knowledge workers. Often, these poor conditions go
-                unnoticed, causing lasting effects on productivity (and health).
+                Indoor environmental conditions such as uncomfortable
+                temperatures, poor air quality, and high noise levels frequently
+                impair the cognitive performance of students and knowledge
+                workers. Often, these poor conditions go unnoticed, causing
+                lasting effects on productivity (and health).
               </p>
               <p>
                 Being students ourselves, we are often in classrooms that may be
@@ -126,6 +130,8 @@
         </div>
       </section>
     </main>
+
+    <site-footer></site-footer>
 
     <script src="js/main.js"></script>
   </body>

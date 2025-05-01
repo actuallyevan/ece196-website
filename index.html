@@ -7,6 +7,7 @@
 
     <!-- Preload critical resources -->
     <link rel="preload" href="components/header.js" as="script" />
+    <link rel="preload" href="components/footer.js" as="script" />
     <link rel="preload" href="css/critical.css" as="style" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,20 +24,34 @@
     <link rel="prefetch" href="team.html" />
     <link rel="prefetch" href="problem.html" />
     <link rel="prefetch" href="solution.html" />
+    <link rel="prefetch" href="updates.html" />
 
     <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
   </head>
   <body>
     <site-header></site-header>
 
     <main class="container">
       <section class="animate__animated animate__fadeIn">
-        <h1 class="super-heading">ECE 196 Team 6</h1>
+        <h1 class="super-heading home-super-heading">Indoor Monitoring</h1>
+        <h1 class="home-h1">Evan, Mark, & Kevin - ECE 196 Spring 2025</h1>
         <div>
           <p>
-            Welcome to the ECE 196 Spring 2025 Team 6 project page! We want to
-            create a monitoring system to track indoor conditions. Our team is
+            Welcome to the ECE 196 Spring 2025 Team 6 project page! Our team is
             Evan, Mark, & Kevin.
+          </p>
+          <p>
+            At UCSD, we often have to deal with uncomfortable temperatures,
+            stuffy air, and high noise levels which frequently impair the
+            cognitive performance of students and knowledge workers. Often,
+            these poor conditions go unnoticed, causing lasting effects on
+            productivity and health. We realized that these effects extend
+            beyond just our own experiences, and wanted to give people to the
+            tools to help them identify these issues. Our solution is an indoor
+            monitoring system that tracks multiple metrics to provide a unified
+            measurement of the environment. A rich display will show the current
+            conditions.
           </p>
 
           <div class="button-container">
@@ -61,10 +76,24 @@
               data-text="Timeline"
               >Timeline</a
             >
+            <a
+              href="media.html"
+              class="arrow-button animate__animated"
+              data-text="Media"
+              >Media</a
+            >
+            <a
+              href="updates.html"
+              class="arrow-button animate__animated"
+              data-text="Updates"
+              >Updates</a
+            >
           </div>
         </div>
       </section>
     </main>
+
+    <site-footer></site-footer>
 
     <script src="js/main.js"></script>
   </body>
