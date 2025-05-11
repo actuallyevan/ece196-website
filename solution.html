@@ -105,11 +105,37 @@
             Block diagram including microcontroller, sensors, and display
           </p>
         </div>
+
+        <div class="problem-section">
+          <h1 class="section-divider">PCB Design</h1>
+          
+          <div class="carousel-container" id="carousel3">
+            <button class="carousel-arrow carousel-prev" id="prev3" aria-label="Previous image">❮</button>
+            
+            <div class="carousel-content">
+              <div class="carousel-images" id="carousel3-images">
+                <!-- Images will be loaded via JavaScript -->
+              </div>
+              <p class="image-caption carousel-caption" id="caption3"></p>
+            </div>
+            
+            <button class="carousel-arrow carousel-next" id="next3" aria-label="Next image">❯</button>
+          </div>
+          
+          <p>
+            Our PDB is integral to our project as it connects our various environmental/sound sensors, display, and buttons to
+            our Feather V2 (esp32) board. Once it is assembled the PCB will be housed in a 3D printed enclosure,
+            which will physically be our final solution. The PCB connects everything together which allows for sensor 
+            measurements to be taken and displayed, the user to use the buttons to switch views, etc. which is 
+            our entire functionality.
+          </p>
+        </div>
       </section>
     </main>
 
     <site-footer></site-footer>
     
     <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>

@@ -578,6 +578,11 @@ img {
   opacity: 1;
 }
 
+/* Add this rule to fix carousel image clipping in .problem-section */
+.problem-section .carousel-image {
+  margin: 0; /* Reset margin that might be inherited from .problem-section img */
+}
+
 .carousel-arrow {
   background: transparent;
   border: none;

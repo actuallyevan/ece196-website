@@ -31,13 +31,39 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       // Add more images as needed
     ],
+    
+    carousel3: [
+      {
+        src: "./images/pcbanno.png",
+        caption: "PCB layout",
+      },
+      {
+        src: "./images/schematicanno.png",
+        caption: "Schematic with annotations",
+      },
+      {
+        src: "./images/3dviewer.png",
+        caption: "Top side of PCB in 3D viewer",
+      },
+      {
+        src: "./images/3dviewer1.png",
+        caption: "Bottom side of PCB in 3D viewer",
+      },
+    ],
   };
 
   function initializeCarousel(carouselId) {
-    const carouselImages = carouselImageSets[carouselId];
     const carouselImagesContainer = document.getElementById(
       `${carouselId}-images`
     );
+    
+    // Check if the carousel exists on this page
+    if (!carouselImagesContainer) {
+      console.log(`Carousel ${carouselId} not found on this page, skipping initialization.`);
+      return null;
+    }
+    
+    const carouselImages = carouselImageSets[carouselId];
     const carouselCaption = document.getElementById(
       `caption${carouselId.slice(-1)}`
     );
@@ -93,6 +119,16 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  initializeCarousel("carousel1");
-  initializeCarousel("carousel2");
+  // Only initialize carousels that exist on the current page
+  if (document.getElementById("carousel1-images")) {
+    initializeCarousel("carousel1");
+  }
+  
+  if (document.getElementById("carousel2-images")) {
+    initializeCarousel("carousel2");
+  }
+  
+  if (document.getElementById("carousel3-images")) {
+    initializeCarousel("carousel3");
+  }
 });
