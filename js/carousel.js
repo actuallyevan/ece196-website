@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const carouselImageSets = {
-    carousel1: [
+    carouselBuildsDesigns: [
       {
         src: "./images/placeholder.jpeg",
         caption: "Initial design sketch of our monitoring system",
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Add more images as needed
     ],
 
-    carousel2: [
+    carouselSchematicsDiagrams: [
       {
         src: "./images/placeholder.jpeg",
         caption: "Software architecture diagram",
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Add more images as needed
     ],
     
-    carousel3: [
+    carouselPcbDesign: [
       {
         src: "./images/pcbanno.png",
         caption: "PCB layout",
@@ -50,6 +50,44 @@ document.addEventListener("DOMContentLoaded", () => {
         caption: "Bottom side of PCB in 3D viewer",
       },
     ],
+    
+    carouselUpdate1: [
+      {
+        src: "./images/pinbudgetsheet.png",
+        caption: "Pin budget section of Google sheet",
+      },
+      {
+        src: "./images/featherfootprint.png",
+        caption: "Custom Adafruit Feather V2 Footprint",
+      },
+      {
+        src: "./images/feathersymbol.png",
+        caption: "Custom Adafruit Feather V2 Symbol",
+      },
+      {
+        src: "./images/ldoschematic.png",
+        caption: "LDO regulator setup for extra rail",
+      },
+    ],
+    
+    carouselUpdate2: [
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "Updated PCB design for Week 8",
+      },
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "Component soldering and assembly",
+      },
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "Test setup for sensor calibration",
+      },
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "Data collection interface prototype",
+      },
+    ],
   };
 
   function initializeCarousel(carouselId) {
@@ -64,11 +102,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     const carouselImages = carouselImageSets[carouselId];
-    const carouselCaption = document.getElementById(
-      `caption${carouselId.slice(-1)}`
-    );
-    const prevButton = document.getElementById(`prev${carouselId.slice(-1)}`);
-    const nextButton = document.getElementById(`next${carouselId.slice(-1)}`);
+    // Construct the full ID for caption, prev, and next buttons
+    const captionId = `caption${carouselId.substring('carousel'.length)}`;
+    const prevButtonId = `prev${carouselId.substring('carousel'.length)}`;
+    const nextButtonId = `next${carouselId.substring('carousel'.length)}`;
+
+    const carouselCaption = document.getElementById(captionId);
+    const prevButton = document.getElementById(prevButtonId);
+    const nextButton = document.getElementById(nextButtonId);
 
     let currentImageIndex = 0;
 
@@ -120,15 +161,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Only initialize carousels that exist on the current page
-  if (document.getElementById("carousel1-images")) {
-    initializeCarousel("carousel1");
+  if (document.getElementById("carouselBuildsDesigns-images")) {
+    initializeCarousel("carouselBuildsDesigns");
   }
   
-  if (document.getElementById("carousel2-images")) {
-    initializeCarousel("carousel2");
+  if (document.getElementById("carouselSchematicsDiagrams-images")) {
+    initializeCarousel("carouselSchematicsDiagrams");
   }
   
-  if (document.getElementById("carousel3-images")) {
-    initializeCarousel("carousel3");
+  if (document.getElementById("carouselPcbDesign-images")) {
+    initializeCarousel("carouselPcbDesign");
+  }
+  
+  if (document.getElementById("carouselUpdate1-images")) {
+    initializeCarousel("carouselUpdate1");
+  }
+  
+  if (document.getElementById("carouselUpdate2-images")) {
+    initializeCarousel("carouselUpdate2");
   }
 });
