@@ -32,31 +32,67 @@
     <main class="container">
       <section class="animate__animated animate__fadeIn">
         <h1>Update 2 - Week 8 Monday</h1>
-        
+
         <p>
-          In our second week of development, we've made significant progress on our hardware design
-          and software architecture. The team has completed the initial PCB layout and started 
-          component assembly. We've also developed a working prototype of our sensing module and 
-          begun integration testing with the data collection system. Our software framework is 
-          now functional and will be ready for field testing next week.
+          Because we received our parts, we were able to make major progress on
+          our project during week 7. However, we have not yet received our PCB,
+          so we were unable to test all of the components together (due to power
+          budget issues).
+        </p>
+
+        <h2>Testing breakouts</h2>
+        <p>
+          The first step was testing all of the breakout boards. To achieve
+          this, we breadboarded the circuit referencing the google sheet that we
+          created in the last milestone. Using the example code by Adafruit, we
+          were able to confirm all of the breakouts were working after soldering
+          header pins to them and breadboarding the circuit.
+        </p>
+
+        <h2>Programming</h2>
+        <p>
+          In addition to testing individual components, we also started
+          programming to enable multiple sensors to work together using I2S,
+          I2C, and SPI. Although we couldn't test every component together, we
+          were able to read data from multiple I2S sensors (BME680, SCD-40).
+          Additionally, we tested the display with test data.
+        </p>
+
+        <h2>Issues we worked through</h2>
+        <p>
+          Setting up I2S for the MEMS microphone was a bit tricky, but by
+          following the Adafruit example code and using the oscilloscope to make
+          sure the clock signals were correct, we were able to successfully
+          measure loudness to some extent.
         </p>
 
         <div class="carousel-container" id="carouselUpdate2">
-          <button class="carousel-arrow carousel-prev" id="prevUpdate2" aria-label="Previous image">❮</button>
+          <button
+            class="carousel-arrow carousel-prev"
+            id="prevUpdate2"
+            aria-label="Previous image"
+          >
+            ❮
+          </button>
           <div class="carousel-content">
             <div id="carouselUpdate2-images" class="carousel-images">
               <!-- Images will be loaded via JavaScript -->
             </div>
             <p id="captionUpdate2" class="image-caption carousel-caption"></p>
           </div>
-          <button class="carousel-arrow carousel-next" id="nextUpdate2" aria-label="Next image">❯</button>
+          <button
+            class="carousel-arrow carousel-next"
+            id="nextUpdate2"
+            aria-label="Next image"
+          >
+            ❯
+          </button>
         </div>
-
       </section>
     </main>
 
     <site-footer></site-footer>
-    
+
     <script src="js/carousel.js"></script>
     <script src="js/main.js"></script>
   </body>

@@ -72,20 +72,20 @@ document.addEventListener("DOMContentLoaded", () => {
     
     carouselUpdate2: [
       {
-        src: "./images/placeholder.jpeg",
-        caption: "Updated PCB design for Week 8",
+        src: "./images/displaytesting.png",
+        caption: "Testing the display",
       },
       {
         src: "./images/placeholder.jpeg",
-        caption: "Component soldering and assembly",
+        caption: "Component breadboarding",
       },
       {
         src: "./images/placeholder.jpeg",
-        caption: "Test setup for sensor calibration",
+        caption: "Soldering headers onto breakout",
       },
       {
         src: "./images/placeholder.jpeg",
-        caption: "Data collection interface prototype",
+        caption: "Code for testing the breakouts",
       },
     ],
   };
