@@ -2,32 +2,44 @@ document.addEventListener("DOMContentLoaded", () => {
   const carouselImageSets = {
     carouselBuildsDesigns: [
       {
-        src: "./images/placeholder.jpeg",
-        caption: "Initial design sketch of our monitoring system",
+        src: "./images/pcbanno.png",
+        caption: "PCB layout",
+      },
+      {
+        src: "./images/topfinalpcb.png",
+        caption: "Final assembled board (top)",
+      },
+      {
+        src: "./images/botfinalpcb.png",
+        caption: "Final assembled board (bottom)",
+      },
+      {
+        src: "./images/onshapecad.png",
+        caption: "3D print CAD model",
+      },      
+      {
+        src: "./images/3dprintbutton.jpg",
+        caption: "3D print showing how buttons work",
       },
       {
         src: "./images/placeholder.jpeg",
-        caption: "Block diagram of our solution architecture",
+        caption: "Picture of final build",
       },
       {
         src: "./images/placeholder.jpeg",
-        caption: "Project development timeline",
+        caption: "Picture of overall report screen",
       },
       // Add more images as needed
     ],
 
     carouselSchematicsDiagrams: [
       {
-        src: "./images/placeholder.jpeg",
-        caption: "Software architecture diagram",
+        src: "./images/schematicanno.png",
+        caption: "Annotated Schematic",
       },
       {
-        src: "./images/placeholder.jpeg",
-        caption: "Development milestone timeline",
-      },
-      {
-        src: "./images/placeholder.jpeg",
-        caption: "UI/UX wireframe designs",
+        src: "./images/block.png",
+        caption: "System Architecture",
       },
       // Add more images as needed
     ],
@@ -39,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         src: "./images/schematicanno.png",
-        caption: "Schematic with annotations",
+        caption: "Annotated Schematic",
       },
       {
         src: "./images/3dviewer.png",
@@ -48,6 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         src: "./images/3dviewer1.png",
         caption: "Bottom side of PCB in 3D viewer",
+      },
+      {
+        src: "./images/stencil.jpg",
+        caption: "Stencil and PCB",
+      },
+      {
+        src: "./images/topfinalpcb.png",
+        caption: "Final assembled board (top)",
+      },
+      {
+        src: "./images/botfinalpcb.png",
+        caption: "Final assembled board (bottom)",
       },
     ],
     
@@ -76,16 +100,77 @@ document.addEventListener("DOMContentLoaded", () => {
         caption: "Testing the display",
       },
       {
-        src: "./images/placeholder.jpeg",
-        caption: "Component breadboarding",
-      },
-      {
-        src: "./images/placeholder.jpeg",
-        caption: "Soldering headers onto breakout",
-      },
-      {
-        src: "./images/placeholder.jpeg",
+        src: "./images/breakouttesting.png",
         caption: "Code for testing the breakouts",
+      },
+    ],
+    
+    carouselUpdate3: [
+      {
+        src: "./images/soldering.jpg",
+        caption: "Soldering headers onto PCB",
+      },
+      {
+        src: "./images/onshapecad.png",
+        caption: "3D print CAD model",
+      },
+      {
+        src: "./images/3dprinting.jpg",
+        caption: "3D printing",
+      },
+      {
+        src: "./images/3dprintempty.jpg",
+        caption: "3D print skeleton",
+      },
+      {
+        src: "./images/3dprintpcb.jpg",
+        caption: "3D print with PCB",
+      },
+      {
+        src: "./images/3dprintbutton.jpg",
+        caption: "3D print showing how buttons work",
+      },
+      {
+        src: "./images/displaycode.png",
+        caption: "Code for displaying data",
+      },
+      {
+        src: "./images/initialprototype.jpg",
+        caption: "Fully working prototype",
+      },
+    ],
+    
+    carouselUpdate4: [
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "Final device",
+      },
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "Overall Report",
+      },
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "High C02 levels",
+      },
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "Final Code for displaying data",
+      },
+    ],
+    
+    carouselTutorials: [
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "Evan's Tutorial (OLED Display)",
+      },
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "Mark's Tutorial ()",
+      },
+      {
+        src: "./images/placeholder.jpeg",
+        caption: "Kevin's Tutorial ()",
       },
     ],
   };
@@ -179,5 +264,17 @@ document.addEventListener("DOMContentLoaded", () => {
   
   if (document.getElementById("carouselUpdate2-images")) {
     initializeCarousel("carouselUpdate2");
+  }
+  
+  if (document.getElementById("carouselUpdate3-images")) {
+    initializeCarousel("carouselUpdate3");
+  }
+  
+  if (document.getElementById("carouselUpdate4-images")) {
+    initializeCarousel("carouselUpdate4");
+  }
+  
+  if (document.getElementById("carouselTutorials-images")) {
+    initializeCarousel("carouselTutorials");
   }
 });

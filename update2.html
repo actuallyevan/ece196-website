@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Update 2 - Week 8 | 196 Team 6</title>
+    <title>196 Team 6</title>
 
     <!-- Preload critical resources -->
     <link rel="preload" href="components/header.js" as="script" />
@@ -45,8 +45,9 @@
           The first step was testing all of the breakout boards. To achieve
           this, we breadboarded the circuit referencing the google sheet that we
           created in the last milestone. Using the example code by Adafruit, we
-          were able to confirm all of the breakouts were working after soldering
-          header pins to them and breadboarding the circuit.
+          were able to confirm most of the breakouts were working after soldering
+          header pins to them and breadboarding the circuit, but we ran into some
+          challenges detailed below.
         </p>
 
         <h2>Programming</h2>
@@ -58,12 +59,19 @@
           Additionally, we tested the display with test data.
         </p>
 
-        <h2>Issues we worked through</h2>
+        <h2>Challenges</h2>
         <p>
           Setting up I2S for the MEMS microphone was a bit tricky, but by
           following the Adafruit example code and using the oscilloscope to make
           sure the clock signals were correct, we were able to successfully
           measure loudness to some extent.
+        </p>
+
+        <p>
+          When trying to test the SCD-40 with other sensors on the breadboard, it was not being detected, 
+          which was concerning. However, once we got our PCB (in later week), all the sensors worked together as expected.
+          We think this may have been possibly due to power budget issues on the breadboard that our PCB was
+          designed to solve.
         </p>
 
         <div class="carousel-container" id="carouselUpdate2">

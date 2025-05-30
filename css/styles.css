@@ -231,19 +231,6 @@ p {
   color: var(--text-primary);
 }
 
-.solution-column ul {
-  margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  list-style-position: outside;
-}
-
-.solution-column li {
-  margin-bottom: 0.5rem;
-  font-weight: 300;
-  font-size: 1.15rem;
-  line-height: 1.6;
-}
-
 .solution-column p + ul {
   margin-top: -1.5rem;
 }
@@ -260,6 +247,25 @@ p {
   font-weight: 300;
   font-size: 1.15rem;
   line-height: 1.6;
+}
+
+/* Add consistent list styling for tutorials and update pages */
+.container ul {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  padding-left: 1.5rem;
+  list-style-position: outside;
+}
+
+.container li {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.container p + ul {
+  margin-top: -1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -400,7 +406,23 @@ p {
   position: relative;
 }
 
-.button-container::before {
+/* Center button container on home page */
+body:has(h1.home-super-heading) .button-container {
+  justify-content: center;
+}
+
+.button-container-with-line {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  position: relative;
+}
+
+.button-container-with-line::before {
   content: "";
   position: absolute;
   left: 0;
