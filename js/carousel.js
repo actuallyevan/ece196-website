@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
         caption: "3D print showing how buttons work",
       },
       {
-        src: "./images/placeholder.jpeg",
+        src: "./images/finalbuild.jpg",
         caption: "Picture of final build",
       },
       {
-        src: "./images/placeholder.jpeg",
+        src: "./images/screen3.jpg",
         caption: "Picture of overall report screen",
       },
       // Add more images as needed
@@ -34,12 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     carouselSchematicsDiagrams: [
       {
-        src: "./images/schematicanno.png",
-        caption: "Annotated Schematic",
-      },
-      {
         src: "./images/block.png",
         caption: "System Architecture",
+      },
+      {
+        src: "./images/state.png",
+        caption: "Simple State Diagram",
+      },
+      {
+        src: "./images/schematicanno.png",
+        caption: "Annotated Schematic",
       },
       // Add more images as needed
     ],
@@ -142,20 +146,28 @@ document.addEventListener("DOMContentLoaded", () => {
     
     carouselUpdate4: [
       {
-        src: "./images/placeholder.jpeg",
-        caption: "Final device",
+        src: "./images/finalbuild.jpg",
+        caption: "Final device with Holistic Readings",
       },
       {
-        src: "./images/placeholder.jpeg",
+        src: "./images/refresh.png",
+        caption: "Refreshing Display Every 10 Seconds",
+      },
+      {
+        src: "./images/debounce.png",
+        caption: "Fix for False Button Presses",
+      },
+      {
+        src: "./images/screen3.jpg",
         caption: "Overall Report",
       },
       {
-        src: "./images/placeholder.jpeg",
-        caption: "High C02 levels",
+        src: "./images/screen2.jpg",
+        caption: "More Granular Readings",
       },
       {
-        src: "./images/placeholder.jpeg",
-        caption: "Final Code for displaying data",
+        src: "./images/screen1.jpg",
+        caption: "CO2 + Altitude Readings with Tooltips",
       },
     ],
     
