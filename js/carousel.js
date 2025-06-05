@@ -185,6 +185,88 @@ document.addEventListener("DOMContentLoaded", () => {
         caption: "Kevin's Tutorial ()",
       },
     ],
+    
+    carouselTesting1: [
+      {
+        src: "./images/tempchart.png",
+        caption: "Temperature and Humidity Test Results",
+      },
+      {
+        src: "./images/co2chart.png",
+        caption: "CO2 Test Results",
+      },
+      {
+        src: "./images/dBchart.png",
+        caption: "Sound Intensity Test Results",
+      },
+    ],
+    
+    carouselTesting2: [
+      {
+        src: "./images/db6.jpg",
+        caption: "Manual Decibel Test",
+      },
+      {
+        src: "./images/temp1.jpg",
+        caption: "Temperature Test 1",
+      },
+      {
+        src: "./images/temp2.jpg",
+        caption: "Temperature Test 2",
+      },
+      {
+        src: "./images/temp3.jpg",
+        caption: "Temperature Test 3",
+      },
+      {
+        src: "./images/temp4.jpg",
+        caption: "Temperature Test 4",
+      },
+      {
+        src: "./images/temp5.jpg",
+        caption: "Temperature Test 5",
+      },
+      {
+        src: "./images/co21.jpg",
+        caption: "CO2 Test 1",
+      },
+      {
+        src: "./images/co22.jpg",
+        caption: "CO2 Test 2",
+      },
+      {
+        src: "./images/co23.jpg",
+        caption: "CO2 Test 3",
+      },
+      {
+        src: "./images/co24.jpg",
+        caption: "CO2 Test 4",
+      },
+      {
+        src: "./images/co25.jpg",
+        caption: "CO2 Test 5",
+      },
+      {
+        src: "./images/db1.jpg",
+        caption: "Decibel Test 1",
+      },
+      {
+        src: "./images/db2.jpg",
+        caption: "Decibel Test 2",
+      },
+      {
+        src: "./images/db3.jpg",
+        caption: "Decibel Test 3",
+      },
+      {
+        src: "./images/db4.jpg",
+        caption: "Decibel Test 4",
+      },
+      {
+        src: "./images/db5.jpg",
+        caption: "Decibel Test 5",
+      },
+    ],
   };
 
   function initializeCarousel(carouselId) {
@@ -288,5 +370,13 @@ document.addEventListener("DOMContentLoaded", () => {
   
   if (document.getElementById("carouselTutorials-images")) {
     initializeCarousel("carouselTutorials");
+  }
+  
+  if (document.getElementById("carouselTesting1-images")) {
+    initializeCarousel("carouselTesting1");
+  }
+  
+  if (document.getElementById("carouselTesting2-images")) {
+    initializeCarousel("carouselTesting2");
   }
 });

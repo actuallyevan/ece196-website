@@ -8,12 +8,12 @@ class SiteHeader extends HTMLElement {
       <header>
         <div class="nav-container">
           <nav class="navbar no-transition">
-            <div class="nav-logo">ECE 196 Team 6</div>
             <div class="nav-links">
               <a href="/ece196-website/" class="nav-link">Home</a>
               <a href="team.html" class="nav-link">Team</a>
               <a href="problem.html" class="nav-link">Problem</a>
               <a href="solution.html" class="nav-link">Solution</a>
+              <a href="testing.html" class="nav-link">Testing</a>
               <a href="timeline.html" class="nav-link">Timeline/Milestones</a>
               <a href="media.html" class="nav-link">Media</a>
               <a href="tutorials.html" class="nav-link">Tutorials/References</a>
