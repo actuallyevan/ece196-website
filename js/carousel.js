@@ -173,16 +173,16 @@ document.addEventListener("DOMContentLoaded", () => {
     
     carouselTutorials: [
       {
-        src: "./images/placeholder.jpeg",
+        src: "./images/evantut.jpg",
         caption: "Evan's Tutorial (OLED Display)",
       },
       {
-        src: "./images/placeholder.jpeg",
-        caption: "Mark's Tutorial ()",
+        src: "./images/marktut.png",
+        caption: "Mark's Tutorial (DHT11)",
       },
       {
-        src: "./images/placeholder.jpeg",
-        caption: "Kevin's Tutorial ()",
+        src: "./images/kevintut.jpeg",
+        caption: "Kevin's Tutorial (DHT11)",
       },
     ],
     
